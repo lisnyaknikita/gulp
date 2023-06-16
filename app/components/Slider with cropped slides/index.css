@@ -1,0 +1,31 @@
+.howitview {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 100px auto;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__slide {
+        width: 816px;
+        height: 400px;
+        background-color: #efefef;
+        transition: all .3s;
+        &.swiper-slide-active{
+            width: 816px !important;
+        }
+        &.swiper-slide-prev,
+        &.swiper-slide-next{
+            width: 180px !important;
+        }
+    }
+    &__slide-box {
+    }
+}
+.howitview-slider {
+    &__wrapper {
+        max-width: 1240px;
+        width: 100%;
+    }
+}

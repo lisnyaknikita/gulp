@@ -1,0 +1,38 @@
+.check-box {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 20px;
+}
+.check-style {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #0ea36e;
+    margin-left: -20px;
+}
+.check-box:checked + .check-style::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #0ea36e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+// Если нужно поместить в квадрат картинку , то
+// .check-box:checked + .check-style{
+//     background-image: url();
+// }
+.check-box:disabled + .check-style {
+    border-color: #ccc;
+}
+.check-box:checked:disabled + .check-style::before {
+    background-color: #ccc;
+}
+// .check-box:focus + .check-style{
+//     box-shadow: 0 0 0 2px #000;
+// }
